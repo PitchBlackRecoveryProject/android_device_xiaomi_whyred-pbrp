@@ -13,7 +13,7 @@
 
 /vendor         ext4    /dev/block/bootdevice/by-name/vendor                  flags=display="Vendor";backup=1;wipeingui
 /vendor_image   emmc    /dev/block/bootdevice/by-name/vendor                  flags=backup=0;flashimg=1
-/cust           ext4    /dev/block/bootdevice/by-name/cust                    flags=display="Cust"
+/cust           ext4    /dev/block/bootdevice/by-name/cust                    flags=display="Cust";backup=1;wipeingui
 /cust           emmc    /dev/block/bootdevice/by-name/cust                    flags=display="Cust Image";backup=0;flashimg=1
 /misc           emmc    /dev/block/bootdevice/by-name/misc                    flags=display="Misc"
 /persist        emmc    /dev/block/bootdevice/by-name/persist                 flags=display="Persist";backup=1;flashimg=1
