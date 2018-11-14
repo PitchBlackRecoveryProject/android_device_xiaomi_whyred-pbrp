@@ -45,6 +45,8 @@ TARGET_NO_BOOTLOADER := true
 
 # Crypto
 TARGET_HW_DISK_ENCRYPTION := true
+TARGET_KEYMASTER_WAIT_FOR_QSEE := true
+TW_INCLUDE_CRYPTO := true
 
 # Kernel
 BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200,n8 androidboot.console=ttyMSM0 earlycon=msm_serial_dm,0xc170000
