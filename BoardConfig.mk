@@ -100,6 +100,7 @@ TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_MAX_BRIGHTNESS := 255
 TW_THEME := portrait_hdpi
 TW_SCREEN_BLANK_ON_BOOT := true
+TW_USE_TOOLBOX := true
 
 # exFAT FS Support
 TW_INCLUDE_FUSE_EXFAT := true
