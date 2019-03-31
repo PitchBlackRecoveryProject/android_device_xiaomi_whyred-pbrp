@@ -7,7 +7,7 @@
 /system_image   emmc    /dev/block/bootdevice/by-name/system           
 /boot           emmc    /dev/block/bootdevice/by-name/boot                    flags=display="Boot"
 /cache          ext4    /dev/block/bootdevice/by-name/cache                   flags=display="Cache"
-/data           ext4    /dev/block/bootdevice/by-name/userdata                flags=encryptable=footer
+/data           ext4    /dev/block/bootdevice/by-name/userdata                flags=encryptable=footer;fileencryption=ice
 /recovery       emmc    /dev/block/bootdevice/by-name/recovery                flags=display="Recovery";backup=1
 
 /vendor         ext4    /dev/block/bootdevice/by-name/vendor                  flags=display="Vendor";backup=1;wipeingui
@@ -17,32 +17,6 @@
 /persist        ext4    /dev/block/bootdevice/by-name/persist                 flags=display="Persist"
 /splash         emmc    /dev/block/bootdevice/by-name/splash                  flags=display="Boot Logo";backup=1;flashimg=1
 
-# Bootloader
-/mdtpsecapp     emmc   /dev/block/bootdevice/by-name/mdtpsecapp       flags=display="Bootloader";backup=1
-/cmnlib64     emmc     /dev/block/bootdevice/by-name/cmnlib64        flags=backup=1;subpartitionof=/mdtpsecapp
-/cmnlib     emmc     /dev/block/bootdevice/by-name/cmnlib      flags=backup=1;subpartitionof=/mdtpsecapp
-/hyp     emmc     /dev/block/bootdevice/by-name/hyp       flags=backup=1;subpartitionof=/mdtpsecapp
-/pmic     emmc     /dev/block/bootdevice/by-name/pmic      flags=backup=1;subpartitionof=/mdtpsecapp
-/tz     emmc     /dev/block/bootdevice/by-name/tz      flags=backup=1;subpartitionof=/mdtpsecapp
-/mdtp     emmc     /dev/block/bootdevice/by-name/mdtp      flags=backup=1;subpartitionof=/mdtpsecapp
-/abl     emmc     /dev/block/bootdevice/by-name/abl      flags=backup=1;subpartitionof=/mdtpsecapp
-/devcfg     emmc     /dev/block/bootdevice/by-name/devcfg      flags=backup=1;subpartitionof=/mdtpsecapp
-/keymaster     emmc     /dev/block/bootdevice/by-name/keymaster      flags=backup=1;subpartitionof=/mdtpsecapp
-/xbl     emmc     /dev/block/bootdevice/by-name/xbl      flags=backup=1;subpartitionof=/mdtpsecapp
-/rpm     emmc     /dev/block/bootdevice/by-name/rpm      flags=backup=1;subpartitionof=/mdtpsecapp
-
-/cmnlib64bak     emmc     /dev/block/bootdevice/by-name/cmnlib64bak      flags=backup=1;subpartitionof=/mdtpsecapp
-/cmnlibbak     emmc     /dev/block/bootdevice/by-name/cmnlibbak      flags=backup=1;subpartitionof=/mdtpsecapp
-/hypbak     emmc     /dev/block/bootdevice/by-name/hypbak      flags=backup=1;subpartitionof=/mdtpsecapp
-/pmicbak     emmc     /dev/block/bootdevice/by-name/pmicbak      flags=backup=1;subpartitionof=/mdtpsecapp
-/tzbak     emmc     /dev/block/bootdevice/by-name/tzbak      flags=backup=1;subpartitionof=/mdtpsecapp
-/ablbak     emmc     /dev/block/bootdevice/by-name/ablbak      flags=backup=1;subpartitionof=/mdtpsecapp
-/devcfgbak     emmc     /dev/block/bootdevice/by-name/devcfgbak      flags=backup=1;subpartitionof=/mdtpsecapp
-/keymasterbak     emmc     /dev/block/bootdevice/by-name/keymasterbak      flags=backup=1;subpartitionof=/mdtpsecapp
-/xblbak     emmc     /dev/block/bootdevice/by-name/xblbak      flags=backup=1;subpartitionof=/mdtpsecapp
-/rpmbak     emmc     /dev/block/bootdevice/by-name/rpmbak      flags=backup=1;subpartitionof=/mdtpsecapp
-
-# Modem
 /modem          emmc    /dev/block/bootdevice/by-name/modem                   flags=backup=1;display="Modem"
 /bluetooth      emmc    /dev/block/bootdevice/by-name/bluetooth               flags=backup=1;subpartitionof=/modem
 /dsp            emmc    /dev/block/bootdevice/by-name/dsp                     flags=backup=1;subpartitionof=/modem
