@@ -31,16 +31,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit language packages
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
-# Charger
-PRODUCT_PACKAGES += \
-	charger_res_images \
-	charger
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.hardware.keystore=sdm660
 
-# Encryption
-PRODUCT_PACKAGES += \
-    libcryptfs_hw
-
-## Device identifier. This must come after all inclusions
+# Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := whyred
 PRODUCT_NAME := omni_whyred
 PRODUCT_BRAND := Xiaomi
