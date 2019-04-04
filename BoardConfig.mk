@@ -101,6 +101,8 @@ TW_MAX_BRIGHTNESS := 4095
 TW_THEME := portrait_hdpi
 TW_SCREEN_BLANK_ON_BOOT := true
 TW_USE_TOOLBOX := true
+TW_CRYPTO_SYSTEM_VOLD_MOUNT := vendor cust odm
+TW_HAS_EDL_MODE := true
 
 # exFAT FS Support
 TW_INCLUDE_FUSE_EXFAT := true
