@@ -102,9 +102,19 @@ TW_MAX_BRIGHTNESS := 4095
 TW_THEME := portrait_hdpi
 TW_SCREEN_BLANK_ON_BOOT := true
 #TW_USE_TOOLBOX := true
-TW_CRYPTO_SYSTEM_VOLD_MOUNT := vendor cust odm
 #TW_HAS_EDL_MODE := true
 ALLOW_MISSING_DEPENDENCIES := true
+
+# Fix userdata decryption
+    TW_CRYPTO_USE_SYSTEM_VOLD := \
+    qseecomd \
+    servicemanager \
+    hwservicemanager \
+    keymaster-3-0
+
+TW_CRYPTO_SYSTEM_VOLD_MOUNT := system vendor
+TW_CRYPTO_SYSTEM_VOLD_DEBUG := true
+TW_CRYPTO_SYSTEM_VOLD_SERVICES := true
 
 # exFAT FS Support
 TW_INCLUDE_FUSE_EXFAT := true
