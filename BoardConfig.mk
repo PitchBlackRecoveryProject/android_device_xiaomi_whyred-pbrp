@@ -72,6 +72,11 @@ endif
 TARGET_BOARD_PLATFORM := sdm660
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno509
 
+#Init
+TARGET_INIT_VENDOR_LIB := libinit_whyred
+TARGET_RECOVERY_DEVICE_MODULES := libinit_whyred
+TARGET_PLATFORM_DEVICE_BASE := /devices/soc/
+
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 262144
 
