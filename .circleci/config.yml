@@ -1,0 +1,34 @@
+version: 2.1
+jobs:
+  build:
+    docker:
+      # new all-in-one docker image
+      - image: fr3akyphantom/droid-builder:latest
+    environment:
+      MANIFEST_BRANCH: 'android-9.0'
+      # PBRP_BRANCH: 'devs'
+      VERSION: '2.9.1'
+      VENDOR: 'xiaomi'
+      CODENAME: 'whyred'
+      BUILD_LUNCH: 'omni_whyred-eng'
+      # Remove the following when Publishing Official
+      TEST_BUILD: 'true'
+      # Only for Official Build, uncomment following
+      # PB_OFFICIAL: 'true'
+    working_directory: /home/builder/pitchblack
+    steps:
+      - run:
+          name: AIO Build
+          command: |
+            echo "Set GitAuth Infos too"
+            git config --global user.email $GitHubMail
+            git config --global user.name $GitHubName
+            git config --global color.ui true
+            wget -q https://raw.githubusercontent.com/PitchBlackRecoveryProject/vendor_pb/pb/build.sh
+            source build.sh
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build:
+          context: org-global
