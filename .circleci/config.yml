@@ -7,7 +7,7 @@ jobs:
     environment:
       MANIFEST_BRANCH: 'android-9.0'
       # PBRP_BRANCH: 'devs'
-      VERSION: '2.9.1'
+      VERSION: '2.9.1-1'
       VENDOR: 'xiaomi'
       CODENAME: 'whyred'
       BUILD_LUNCH: 'omni_whyred-eng'
