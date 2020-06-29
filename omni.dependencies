@@ -3,6 +3,6 @@
         "remote": "github",
         "repository": "Ancient-Project/android_kernel_xiaomi_whyred",
         "target_path": "kernel/xiaomi/whyred",
-        "revision": "ten-cam"
+        "revision": "eas-new"
     }
 ]
