@@ -26,7 +26,7 @@ $(call inherit-product, vendor/pb/config/common.mk)
 PRODUCT_DEVICE := whyred
 PRODUCT_NAME := omni_whyred
 PRODUCT_BRAND := Xiaomi
-PRODUCT_MODEL := Xiaomi Redmi Note 5 Pro
+PRODUCT_MODEL := Redmi Note 5 Pro
 PRODUCT_MANUFACTURER := Xiaomi
 
 # enable stock zip packages flash
