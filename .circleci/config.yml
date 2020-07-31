@@ -6,7 +6,7 @@ jobs:
       - image: fr3akyphantom/droid-builder:latest
     environment:
       MANIFEST_BRANCH: 'android-9.0'
-      # PBRP_BRANCH: 'devs'
+      PBRP_BRANCH: 'xy'
       VERSION: '3.0.0'
       MAINTAINER: '@Reza_Adi_Pangestu'
       VENDOR: 'xiaomi'
