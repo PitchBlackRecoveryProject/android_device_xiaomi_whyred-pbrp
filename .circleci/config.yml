@@ -6,7 +6,7 @@ jobs:
       - image: fr3akyphantom/droid-builder:latest
     environment:
       MANIFEST_BRANCH: 'android-9.0'
-      PBRP_BRANCH: 'xy'
+      #PBRP_BRANCH: 'reza'
       VERSION: '3.0.0'
       MAINTAINER: '@Reza_Adi_Pangestu'
       VENDOR: 'xiaomi'
@@ -17,13 +17,14 @@ jobs:
       # Only for Official Build, uncomment following
       PB_OFFICIAL: 'true'
       CHANGELOG: |
-        - Bringup 3.0 
-        - Source side changes 
-        - Fully Redesigned UI 
-        - New Android like Power Menu (Activated via power key hold) 
-        - Flashlight toggled by Vol up(+) on hold 
-        - Flashlight toggle on Lockscreen 
-        - Etc.
+        - Update based 3.5.0
+        - Update lock pattern types for A11
+        - Improve logd
+        - Support delayed adopted storage mount
+        - Support new Magisk.apk installed
+        - Refresh system details after sideload and wipe system
+        - Restore context for SAR
+        - Misc
     working_directory: /home/builder/pitchblack
     steps:
       - run:
