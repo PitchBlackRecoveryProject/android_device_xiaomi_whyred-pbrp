@@ -43,8 +43,8 @@ TARGET_BOOTLOADER_BOARD_NAME := sdm660
 TARGET_NO_BOOTLOADER := true
 
 # Crypto
-TARGET_CRYPTFS_HW_PATH := vendor/qcom/opensource/commonsys/cryptfs_hw
-TARGET_HW_DISK_ENCRYPTION := true
+#TARGET_CRYPTFS_HW_PATH := vendor/qcom/opensource/commonsys/cryptfs_hw
+#TARGET_HW_DISK_ENCRYPTION := true
 TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_CRYPTO_FBE := true
 TW_INCLUDE_FBE := true
@@ -68,9 +68,9 @@ TARGET_BOARD_PLATFORM := sdm660
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno512
 
 #Init
-TARGET_INIT_VENDOR_LIB := libinit_whyred
-TARGET_RECOVERY_DEVICE_MODULES := libinit_whyred
-TARGET_PLATFORM_DEVICE_BASE := /devices/soc/
+#TARGET_INIT_VENDOR_LIB := libinit_whyred
+#TARGET_RECOVERY_DEVICE_MODULES := libinit_whyred
+#TARGET_PLATFORM_DEVICE_BASE := /devices/soc/
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 262144
