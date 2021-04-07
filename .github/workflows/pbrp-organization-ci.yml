@@ -19,6 +19,7 @@ env:
   BOT_API: ${{ secrets.BOT_API }}
   GCF_AUTH_KEY: ${{ secrets.GCF_AUTH_KEY }}
   GH_BOT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  GH_SECRET_TOKEN: ${{ secrets.GH_BOT_TOKEN }}
   GitHubMail: ${{ secrets.GitHubMail }}
   GitHubName: ${{ secrets.GitHubName }}
   SFPassword: ${{ secrets.SFPassword }}
@@ -36,7 +37,7 @@ jobs:
          uses: rokibhasansagar/slimhub_actions@main
 
        - name: Auto Adapt Manifest
-         run: echo "MANIFEST=https://pbrp-bot:${GH_BOT_TOKEN}@github.com/PitchBlackRecoveryProject/manifest -b ${GITHUB_REF##*/}" >> $GITHUB_ENV
+         run: echo "MANIFEST=https://pbrp-bot:${GH_SECRET_TOKEN}@github.com/PitchBlackRecoveryProject/manifest -b ${GITHUB_REF##*/}" >> $GITHUB_ENV
 
        - name: Export Vars
          run: |
