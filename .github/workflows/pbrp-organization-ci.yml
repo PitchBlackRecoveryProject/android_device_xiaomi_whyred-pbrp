@@ -37,7 +37,12 @@ jobs:
          uses: rokibhasansagar/slimhub_actions@main
 
        - name: Auto Adapt Manifest
-         run: echo "MANIFEST=https://pbrp-bot:${GH_SECRET_TOKEN}@github.com/PitchBlackRecoveryProject/manifest -b ${GITHUB_REF##*/}" >> $GITHUB_ENV
+         run: |
+              echo "MANIFEST=https://github.com/PitchBlackRecoveryProject/manifest -b ${GITHUB_REF##*/}" >> $GITHUB_ENV
+              git config --global user.email ${GitHubMail}
+              git config --global user.name "pbrp-bot"
+              git config --global credential.helper store
+              echo "https://pbrp-bot:${{ secrets.GH_SECRET_TOKEN }}@github.com" > ~/.git-credentials
 
        - name: Export Vars
          run: |
