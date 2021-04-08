@@ -49,7 +49,7 @@ jobs:
               if [[ ${BUILD_RELEASE_TYPE} == "TEST" ]]; then echo "TEST_BUILD=true"  >> $GITHUB_ENV;fi
               if [[ ${BUILD_RELEASE_TYPE} == "BETA" ]]; then echo "BETA_BUILD=true"  >> $GITHUB_ENV;fi
               if [[ ${BUILD_RELEASE_TYPE} == "OFFICIAL" ]]; then echo "PB_OFFICIAL=true"  >> $GITHUB_ENV;fi
-              echo -e "machine github.com\n  login $GH_BOT_TOKEN" > ~/.netrc
+              echo -e "machine github.com\n  login $GH_SECRET_TOKEN" > ~/.netrc
 
        - name: Recovery Compilation
          uses: Carbonatedblack/Recovery-Compiler@production
