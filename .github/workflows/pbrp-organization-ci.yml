@@ -42,7 +42,7 @@ jobs:
               git config --global user.email ${GitHubMail}
               git config --global user.name "pbrp-bot"
               git config --global credential.helper store
-              echo "https://pbrp-bot:${{ secrets.GH_SECRET_TOKEN }}@github.com" > ~/.git-credentials
+              echo "https://pbrp-bot:${GH_SECRET_TOKEN}@github.com" > ~/.git-credentials
 
        - name: Export Vars
          run: |
