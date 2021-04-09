@@ -38,14 +38,14 @@ jobs:
 
        - name: Auto Adapt Manifest
          run: |
-              echo "MANIFEST=https://$GITHUB_ACTOR:$GH_BOT_TOKEN@github.com/PitchBlackRecoveryProject/manifest -b android-11" >> $GITHUB_ENV
+              echo "MANIFEST=https://pbrp-bot:$GH_SECRET_TOKEN@github.com/PitchBlackRecoveryProject/manifest -b android-11" >> $GITHUB_ENV
 
        - name: Export Vars
          run: |
               if [[ ${BUILD_RELEASE_TYPE} == "TEST" ]]; then echo "TEST_BUILD=true"  >> $GITHUB_ENV;fi
               if [[ ${BUILD_RELEASE_TYPE} == "BETA" ]]; then echo "BETA_BUILD=true"  >> $GITHUB_ENV;fi
               if [[ ${BUILD_RELEASE_TYPE} == "OFFICIAL" ]]; then echo "PB_OFFICIAL=true"  >> $GITHUB_ENV;fi
-              git config --global user.email ${GitHubMail}
+              git config --global user.email pitchblackrecovery@gmail.com
               git config --global user.name pbrp-bot
               echo "machine github.com login $GH_SECRET_TOKEN password x-oauth-basic" > $HOME/.netrc
 
