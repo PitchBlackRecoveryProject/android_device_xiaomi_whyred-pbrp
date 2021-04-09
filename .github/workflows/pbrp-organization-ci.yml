@@ -40,7 +40,7 @@ jobs:
          run: |
               echo "MANIFEST=https://github.com/PitchBlackRecoveryProject/manifest -b ${GITHUB_REF##*/}" >> $GITHUB_ENV
               git config --global user.email ${GitHubMail}
-              git config --global user.name "pbrp-bot"
+              git config --global user.name pbrp-bot
               git config --global credential.helper store
               echo "https://pbrp-bot:${GH_SECRET_TOKEN}@github.com" > ~/.git-credentials
 
