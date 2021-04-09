@@ -47,7 +47,7 @@ jobs:
               if [[ ${BUILD_RELEASE_TYPE} == "OFFICIAL" ]]; then echo "PB_OFFICIAL=true"  >> $GITHUB_ENV;fi
               git config --global user.email ${GitHubMail}
               git config --global user.name pbrp-bot
-              echo "machine github.com login $GH_BOT_TOKEN password x-oauth-basic" > $HOME/.netrc
+              echo "machine github.com login $GH_SECRET_TOKEN password x-oauth-basic" > $HOME/.netrc
 
        - name: Recovery Compilation
          uses: Carbonatedblack/Recovery-Compiler@production
