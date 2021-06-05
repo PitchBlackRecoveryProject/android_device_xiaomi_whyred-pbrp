@@ -50,7 +50,7 @@ jobs:
               echo "machine github.com login $GH_SECRET_TOKEN password x-oauth-basic" > $HOME/.netrc
 
        - name: Recovery Compilation
-         uses: Carbonatedblack/Recovery-Compiler@production
+         uses: PitchBlackRecoveryProject/Recovery-Compiler@production
        
        - name: Release Builds 
          run: |
